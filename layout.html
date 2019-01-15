@@ -1,0 +1,234 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        <style>
+            body{
+                background-color: #f4f5f9;
+            }
+            .body-container {
+                height: 100vh;
+                display: grid;
+                grid-template-columns: [v1] 30% [v2] 70% [v3];
+                grid-template-rows: [h1] 70px [h2] 20% [h3] auto [h4];
+            }
+            
+            /*top header*/
+            .top-container {
+                padding-top: 1%;
+                display:grid;
+                background-color: #D74B4B;
+                grid-column: span 2;
+                grid-template-columns: [vv1] 40% [vv2] 50% [vv3] auto [vv4];
+            }
+            #logo {
+                grid-column-start:span 1;
+            }
+            #search {
+                grid-column: span 1;
+            }
+            #login {
+                margin-left: 25pt;
+                margin-top: 3pt;
+                width: 30px;
+                grid-column-start: vv3;
+                grid-column-end: vv4;
+            }
+            #login:hover {
+                cursor: pointer;
+                filter: invert(100%);
+            }
+
+
+            
+            /* left bar*/
+            .left-container {
+                display: grid;
+                grid-template-rows: 30% 5% auto auto;
+                /*grid-row-gap: 5px;*/
+                margin-top: 20px;
+                margin-left: 15%;
+                border: solid 1px #dddfe6;
+                background-color: white;
+                height: fit-content;
+            }
+            #company-head {
+                background-color: #D74B4B;
+                height: 70%; /* 依照container分配的格子佔用50% */
+                padding-top: 10%;
+            }
+            #company-name {
+                text-align: center;
+                font-size: large;
+                font-weight: bold;
+                //background-color: aqua;
+            }
+            #company-intro {
+                //background-color: dimgray;
+                text-align: center;
+            }
+            .head-photo {
+                width: 150px;
+                height: 150px;
+                background-color: white;
+                border: solid 5px white;
+                border-radius: 999em;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            .list-group-item img {
+                width: 25px;
+                margin-right: 10px;
+            }
+            .list-group {
+                display: block;
+                margin-left: 5px;
+                margin-right: 5px;
+                text-align: left;
+            }
+            #company-tag{
+                text-align: center;
+            }
+            .tag {
+                background-color:#D74B4B; 
+                border-radius: 5px;
+                width:fit-content;
+                padding:3px;
+                color:  white;
+                display:block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 3px;
+                margin-bottom: 3px;
+                box-shadow: 0px 3px 3px gray;
+            }
+            .tag:hover {
+                cursor: pointer;
+            }
+            #tag-pool {
+                margin: 10px;
+                margin-bottom: 30px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            /*main content*/
+            .content-container {
+                height: fit-content;
+                margin-top: 20px;
+                margin-left: 5%;
+                margin-right: 5%;
+                border: solid 1px #dddfe6;
+                background-color: white;
+                display: grid;
+                grid-template-rows: auto auto auto;
+                padding-top: 3%;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+            #intro-detail {
+                background-color: #c1c3cc;
+
+            }
+            .saysth {
+                background-color: #e6e7ed;
+                margin-top: 3%;
+            }
+            .content-title {
+                font-size: 40pt;
+                font-weight: bold;
+                color:white;
+                margin-top: -15px;
+            }
+            .content-text {
+                padding: 5%;
+                padding-top: 15px;
+            }
+            .saysth img {
+                width: 200px;
+                float: right;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="body-container">
+            <div class="top-container">
+                <div class="grid-item">
+                    <a href="landing.html"><img src="image/LogoMakr_3w8Kxs.png" height=40px id="logo"></a>
+                </div>
+                <div class="grid-item" id="search">
+                    <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Company Name" aria-label="Search" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-light" type="button" id="button-addon2">Search</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <a href="signup.html"><img src="image/login.png" id="login" alt="login"></a>
+                </div>
+            </div>
+            <div class="left-container" id="lefter">
+                <div id="company-head">
+                    <img src="image/car.jpg" class="head-photo">
+                </div>
+                <div id="company-name">
+                    建大輪胎<br>
+                </div>
+                <div id="company-intro">
+                     <img src="image/heart.png" width=15px height=15px>
+                     追蹤：3452人 <br>
+                     ★★★★☆ 3.9 <br>
+                     <br>
+                     <div class="list-group">
+                         <a href="#" class="list-group-item"><img src="image/route.png">台北市中正區羅斯福路二段100號</a>
+                         <a href="#" class="list-group-item"><img src="image/internet.png">admin@kenda.com.tw</a>
+                         <a href="#" class="list-group-item"><img src="image/smartphone.png">02-27662000</a>
+                         <a href="#" class="list-group-item"><img src="image/paper-plane.png">傳訊息給我們</a>
+
+                     </div>
+                </div>
+                <div id="company-tag">
+                    Tags
+                    <div id="tag-pool">
+                        <div class="tag">客製化</div>
+                        <div class="tag">ISO9001</div>
+                        <div class="tag">自行車輪胎</div>
+                        <div class="tag">汽車輪胎</div>
+                        <div class="tag">品質優良</div>
+                    </div>    
+                </div>
+            </div>
+            <div class="content-container" id="content">
+                <div id="intro-detail">
+                    <div class="content-title">公司簡介</div>
+                    <div class="content-text">
+                        基於客戶對品質之需求日益提高，建大公司不斷持續改善生產技術與管理體系，嚴謹地，控制生產流程每一個環節，自1978年以來除通過CNS、JIS、E-MARK等之標準外，並陸續通過國際標準組織ISO 9001及QS 9000品質系統認証，並由最高領導階層明示達成客戶需求與期望之品質方針與政策由全公司貫徹施，務求以最完美的產品與服務呈現給客戶。 
+                        基於客戶對品質之需求日益提高，建大公司不斷持續改善生產技術與管理體系，嚴謹地，控制生產流程每一個環節，自1978年以來除通過CNS、JIS、E-MARK等之標準外，並陸續通過國際標準組織ISO 9001及QS 9000品質系統認証，並由最高領導階層明示達成客戶需求與期望之品質方針與政策由全公司貫徹施，務求以最完美的產品與服務呈現給客戶。
+                    </div>
+                </div>
+                <div class="saysth">
+                    <div class="content-title">文案Ａ</div>
+                    <img src="image/tire.jpg">
+                    <div class="content-text">
+                        基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高<br>
+                        
+                    </div>
+                </div>
+                <div class="saysth">
+                    <div class="content-title">文案B</div>
+                    <img src="image/tire2.jpg">
+                    <div class="content-text">
+                        基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高<br>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,148 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+        <style>
+            body{
+                background-color: #f4f5f9;
+            }
+            .body-container {
+                height: 100vh;
+                display: grid;
+                grid-template-columns: [v1] 30% [v2] 70% [v3];
+                grid-template-rows: [h1] 70px [h2] 20% [h3] auto [h4];
+            }
+            
+            /*top header*/
+            .top-container {
+                padding-top: 1%;
+                display:grid;
+                background-color: #D74B4B;
+                grid-column: span 2;
+                grid-template-columns: [vv1] 40% [vv2] 50% [vv3] auto [vv4];
+            }
+            #logo {
+                grid-column-start:span 1;
+            }
+            #search {
+                grid-column: span 1;
+            }
+            #login {
+                margin-left: 25pt;
+                margin-top: 3pt;
+                width: 30px;
+                grid-column-start: vv3;
+                grid-column-end: vv4;
+            }
+            #login:hover {
+                cursor: pointer;
+                filter: invert(100%);
+            }
+
+
+            
+            /*main content*/
+            .signup-container {
+                grid-column: span 3;
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+            
+            .sign-box {
+                border:solid gray 1px;
+                background-color: rgba(255,255,255,0.5);
+                margin-top:8%;
+                height:90%;
+                box-shadow: 1px 3px 3px gray;
+            }
+            #sign-in {
+                margin-left:30%;
+                margin-right:5%;
+                
+            }
+            #sign-up {
+                margin-right:30%;
+                margin-left:5%;
+                border:solid gray 1px;
+            }
+            .sign-box span {
+                font-weight:bold;
+                color:gray;
+            }
+            
+            input[type=text],[type=password] {
+              width: 100%;
+              padding: 12px 20px;
+              display: inline-block;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+            }
+            .signup-head {
+                grid-template-columns: auto 25% 25%;
+                display: grid;
+                padding: 10px;
+            }
+            .signup-bottom {
+                margin: 30px;
+            }
+            .btn-block {
+                margin-top: 5%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="body-container">
+            <div class="top-container">
+                <div class="grid-item">
+                    <a href="landing.html"><img src="image/LogoMakr_3w8Kxs.png" height=40px id="logo"></a>
+                </div>
+                <div class="grid-item" id="search">
+                    <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Company Name" aria-label="Search" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-light" type="button" id="button-addon2">Search</button>
+                    </div>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <a href="signup.html"><img src="image/login.png" id="login" alt="login"></a>
+                </div>
+            </div>
+            <div class="signup-container">
+                <div class="sign-box" id="sign-in">
+                    <div class="signup-head">
+                    <span>登入</span><br>
+                        </div>
+                    <div class="signup-bottom">
+                    <label for="account">帳號</label><br>
+                    <input type="text" id="account"><br>
+                    <label for="pwd">密碼</label><br>
+                    <input type="password" id="pwd"><br>
+                    <button type="button" class="btn btn-danger btn-block">登入</button>
+                    </div>
+                </div>
+                <div class="sign-box" id="sign-up">
+                    <div class="signup-head">
+                    <span>註冊</span><label class="radio-inline"><input type="radio" name="optradio" checked>企業</label>
+<label class="radio-inline"><input type="radio" name="optradio">個人</label>
+                    </div>
+                    <div class="signup-bottom">
+                    <label for="account">統一編號</label><br>
+                    <input type="text" id="account"><br>
+                    <label for="pwd">密碼</label><br>
+                    <input type="password" id="pwd"><br>
+                    <label for="pwd">E-mail</label><br>
+                    <input type="text" id="email"><br>
+                    <button type="button" class="btn btn-danger btn-block">註冊</button>
+
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </body>
+</html>
