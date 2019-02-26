@@ -47,7 +47,7 @@
             /* left bar*/
             .left-container {
                 display: grid;
-                grid-template-rows: 30% 5% auto auto;
+                grid-template-rows: 35% 5% auto auto;
                 /*grid-row-gap: 5px;*/
                 margin-top: 20px;
                 margin-left: 15%;
@@ -60,7 +60,7 @@
                 height: 70%; /* 依照container分配的格子佔用50% */
                 padding-top: 10%;
             }
-            #company-name {
+            #user-name {
                 text-align: center;
                 font-size: large;
                 font-weight: bold;
@@ -133,17 +133,24 @@
             }
             #intro-detail {
                 background-color: #c1c3cc;
-
+                margin-bottom: 1%;
+            }
+            #intro-detail .content-title {
+                color: white;
+                font-size: 20pt;
             }
             .saysth {
                 background-color: #e6e7ed;
-                margin-top: 3%;
+                margin-bottom: 3%;
             }
             .content-title {
-                font-size: 40pt;
+                font-size: 15pt;
                 font-weight: bold;
-                color:white;
-                margin-top: -15px;
+                color:black;
+            }
+            .content-subtitle {
+                font-size: 15pt;
+                color: gray;
             }
             .content-text {
                 padding: 5%;
@@ -195,45 +202,42 @@
             </div>
             <div class="left-container" id="lefter">
                 <div id="company-head">
-                    <img src="image/car.jpg" class="head-photo">
+                    <img src="image/person.png" class="head-photo">
                 </div>
-                <div id="company-name">
-                    建大輪胎<br>
+                <div id="user-name">
+                    王小明<br>
                 </div>
                 <div id="company-intro">
-                     <img src="image/heart.png" width=15px height=15px>
-                     追蹤：3452人 <br>
-                     ★★★★☆ 3.9 <br>
+                     建大輪胎 <br>
+                     業務代表 <br>
                      <br>
                      <div class="list-group">
-                         <a href="#" class="list-group-item"><img src="image/route.png">台北市中正區羅斯福路二段100號</a>
                          <a href="#" class="list-group-item"><img src="image/internet.png">admin@kenda.com.tw</a>
                          <a href="#" class="list-group-item"><img src="image/smartphone.png">02-27662000</a>
-                         <a href="#" class="list-group-item"><img src="image/paper-plane.png">傳訊息給我們</a>
 
                      </div>
                 </div>
                 <div id="company-tag">
-                    Tags
+                    您追蹤的企業
                     <div id="tag-pool">
-                        <div class="tag">客製化</div>
-                        <div class="tag">ISO9001</div>
-                        <div class="tag">自行車輪胎</div>
-                        <div class="tag">汽車輪胎</div>
-                        <div class="tag">品質優良</div>
+                        <div class="tag">米其林輪胎</div>
+                        <div class="tag">中華汽車</div>
+                        <div class="tag">非常機車</div>
+                        <div class="tag">捷安特腳踏車</div>
+
+                      
                     </div>    
                 </div>
             </div>
             <div class="content-container" id="content">
                 <div id="intro-detail">
-                    <div class="content-title">公司簡介</div>
-                    <div class="content-text">
-                        基於客戶對品質之需求日益提高，建大公司不斷持續改善生產技術與管理體系，嚴謹地，控制生產流程每一個環節，自1978年以來除通過CNS、JIS、E-MARK等之標準外，並陸續通過國際標準組織ISO 9001及QS 9000品質系統認証，並由最高領導階層明示達成客戶需求與期望之品質方針與政策由全公司貫徹施，務求以最完美的產品與服務呈現給客戶。 
-                        基於客戶對品質之需求日益提高，建大公司不斷持續改善生產技術與管理體系，嚴謹地，控制生產流程每一個環節，自1978年以來除通過CNS、JIS、E-MARK等之標準外，並陸續通過國際標準組織ISO 9001及QS 9000品質系統認証，並由最高領導階層明示達成客戶需求與期望之品質方針與政策由全公司貫徹施，務求以最完美的產品與服務呈現給客戶。
-                    </div>
+                    <div class="content-title">追蹤的貼文</div>
+                    
                 </div>
                 <div class="saysth">
-                    <div class="content-title">文案Ａ</div>
+                    <div class="content-title">米其林輪胎</div>
+                    <div class="content-subtitle">全新耐磨款 盡享賽道性能</div>
+
                     <img src="image/tire.jpg">
                     <div class="content-text">
                         基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高<br>
@@ -246,7 +250,9 @@
                     </div>
                 </div>
                 <div class="saysth">
-                    <div class="content-title">文案B</div>
+                    <div class="content-title">捷安特腳踏車</div>
+                    <div class="content-subtitle">整合式低風阻能量補給系統</div>
+
                     <img src="image/tire2.jpg">
                     <div class="content-text">
                         基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高基於客戶對品質之需求日益提高<br>

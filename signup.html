@@ -93,12 +93,17 @@
                 margin-top: 5%;
             }
         </style>
+        <script>
+            function personal_page() {
+                window.location = "layout_personal.html";
+            }
+        </script>
     </head>
     <body>
         <div class="body-container">
             <div class="top-container">
                 <div class="grid-item">
-                    <a href="index.html"><img src="image/LogoMakr_3w8Kxs.png" height=40px id="logo"></a>
+                    <a href="landing.html"><img src="image/LogoMakr_3w8Kxs.png" height=40px id="logo"></a>
                 </div>
                 <div class="grid-item" id="search">
                     <div class="input-group mb-3">
@@ -122,7 +127,7 @@
                     <input type="text" id="account"><br>
                     <label for="pwd">密碼</label><br>
                     <input type="password" id="pwd"><br>
-                    <button type="button" class="btn btn-danger btn-block">登入</button>
+                    <button type="button" class="btn btn-danger btn-block" onclick="personal_page()">登入</button>
                     </div>
                 </div>
                 <div class="sign-box" id="sign-up">
